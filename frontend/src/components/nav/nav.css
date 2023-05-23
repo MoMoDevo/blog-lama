@@ -1,0 +1,25 @@
+.nav{
+    display: flex;
+    align-items: center;
+    height: 60px;
+    background-color: rgb(191, 191, 221);
+    justify-content: space-around;
+}
+.links{
+    display: flex;
+    gap: 10px;
+}
+.profilepic{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
+.logouttt{
+    display: flex;
+    gap: 20px;
+}
+.userinfo{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}

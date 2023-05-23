@@ -22,7 +22,8 @@ const postShema=new Schema({
     },
     author:{
         type:ObjectId,
-        ref:"User"
+        ref:"User",
+        
     },
     category:{
         type:ObjectId,
@@ -32,5 +33,5 @@ const postShema=new Schema({
     
   
    
-})
+},{timestamps:true})
 module.exports = mongoose.model("Post", postShema);

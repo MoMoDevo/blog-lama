@@ -6,6 +6,8 @@ const authROutes=require("./routes/authRoute")
 const mongoose=require("mongoose")
 const categoryRoutes=require("./routes/categoryRoute")
 const postRoutes=require("./routes/postRoute")
+const userRoutes=require("./routes/userRoute")
+const cookieParser = require("cookie-parser" )
 dotenv.config()
 
 const connect=async()=>{
@@ -20,10 +22,12 @@ const connect=async()=>{
 
 app.use(express.json())
 app.use(cors())
+app.use(cookieParser());
 
-app.use("/",authROutes)
+app.use("/api",authROutes)
 app.use("/category",categoryRoutes)
-app.use("/createIt",postRoutes)
+app.use("/post",postRoutes)
+app.use("/",userRoutes)
 
 
 

@@ -1,9 +1,15 @@
 const express=require("express")
-const{register}=require("../controllers/authController")
+const{register, logoutUser,loggInUser}=require("../controllers/authController")
+
 const router=express.Router()
 
 
 router.post("/",register)
+
+
+router.post("/login",loggInUser)
+router.post("/register",register)
+ 
 
 
 
